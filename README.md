@@ -11,7 +11,6 @@ This project is a Spring Boot-based REST API for managing a warehouse. The appli
 - [API Documentation](#api-documentation)
 - [Testing](#testing)
 - [Project Structure](#project-structure)
-- [License](#license)
 
 ## Features
 
@@ -59,3 +58,44 @@ This project is a Spring Boot-based REST API for managing a warehouse. The appli
 To run the application, use the following command:
 ```sh
 mvn spring-boot:run
+The application will be available at http://localhost:8191
+```
+
+## API Documentation
+```sh
+API documentation is available at http://localhost:8191/swagger-ui.html
+```
+
+## Testing
+- To run the unit tests, use the following command:
+```sh
+mvn test
+```
+
+## Project Structure
+```sh
+src
+└── main
+    ├── java
+    │   └── com
+    │       └── example
+    │           └── warehouse
+    │               ├── controller
+    │               │   ├── UserController.java
+    │               │   ├── InventoryController.java
+    │               │   └── BorrowController.java
+    │               ├── entity
+    │               │   ├── User.java
+    │               │   ├── Inventory.java
+    │               │   └── BorrowRecord.java
+    │               ├── repository
+    │               │   ├── UserRepository.java
+    │               │   ├── InventoryRepository.java
+    │               │   └── BorrowRecordRepository.java
+    │               └── service
+    │                   ├── UserService.java
+    │                   ├── InventoryService.java
+    │                   └── BorrowService.java
+    └── resources
+        └── application.properties
+```
