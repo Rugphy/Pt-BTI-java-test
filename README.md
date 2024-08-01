@@ -9,7 +9,6 @@ This project is a Spring Boot-based REST API for managing a warehouse. The appli
 - [Setup](#setup)
 - [Running the Application](#running-the-application)
 - [API Documentation](#api-documentation)
-- [Testing](#testing)
 - [Project Structure](#project-structure)
 
 ## Features
@@ -66,11 +65,6 @@ The application will be available at http://localhost:8191
 API documentation is available at http://localhost:8191/swagger-ui.html
 ```
 
-## Testing
-- To run the unit tests, use the following command:
-```sh
-mvn test
-```
 
 ## Project Structure
 ```sh
