@@ -19,14 +19,16 @@ public class InventoryService {
     }
 
     @Transactional
-    public Inventory increaseInventory(Long id, int quantity) {
-        Inventory inventory = inventoryRepository.findById(id).orElseThrow(() -> new RecordNotFoundException("Item not found with id: " + id));
+    public Inventory increaseInventory(Long idInventory, int quantity) {
+        Inventory inventory = inventoryRepository.findById(idInventory)
+                .orElseThrow(() -> new RecordNotFoundException("Item not found with id: " + idInventory));
         inventory.setQuantity(inventory.getQuantity() + quantity);
         return inventoryRepository.save(inventory);
     }
 
-    public Inventory getInventoryById(Long id) {
-        return inventoryRepository.findById(id).orElseThrow(() -> new RecordNotFoundException("Item not found with id: " + id));
+    public Inventory getInventoryById(Long idInventory) {
+        return inventoryRepository.findById(idInventory)
+                .orElseThrow(() -> new RecordNotFoundException("Item not found with idInventory: " + idInventory));
     }
 
     public List<Inventory> getAllInventory() {

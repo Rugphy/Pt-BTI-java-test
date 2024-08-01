@@ -18,16 +18,16 @@ public class InventoryController {
         return inventoryService.addInventory(inventory);
     }
 
-    @PostMapping("/{id}/increase")
-    public Inventory increaseInventory(@PathVariable Long id,
+    @PostMapping("/{idInventory}/increase")
+    public Inventory increaseInventory(@PathVariable Long idInventory,
                                        @RequestParam int quantity) {
-        return inventoryService.increaseInventory(id, quantity);
+        return inventoryService.increaseInventory(idInventory, quantity);
     }
 
     @GetMapping
-    public List<Inventory> getInventory(@RequestParam(required = false) Long id) {
-        if (id != null) {
-            return List.of(inventoryService.getInventoryById(id));
+    public List<Inventory> getInventory(@RequestParam(required = false) Long idInventory) {
+        if (idInventory != null) {
+            return List.of(inventoryService.getInventoryById(idInventory));
         }
         return inventoryService.getAllInventory();
     }

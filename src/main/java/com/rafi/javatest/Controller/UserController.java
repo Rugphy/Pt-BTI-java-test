@@ -19,9 +19,9 @@ public class UserController {
     }
 
     @GetMapping
-    public List<User> getUsers(@RequestParam(required = false) Long id) {
-        if (id != null) {
-            return List.of(userService.getUserById(id));
+    public List<User> getUsers(@RequestParam(required = false) Long idUser) {
+        if (idUser != null) {
+            return List.of(userService.getUserById(idUser));
         }
         return userService.getAllUsers();
     }

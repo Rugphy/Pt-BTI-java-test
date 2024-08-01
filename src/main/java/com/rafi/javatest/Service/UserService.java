@@ -17,9 +17,9 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public User getUserById(Long id) {
-        return userRepository.findById(id)
-                .orElseThrow(() -> new RecordNotFoundException("User not found with id: " + id));
+    public User getUserById(Long idUser) {
+        return userRepository.findById(idUser)
+                .orElseThrow(() -> new RecordNotFoundException("User not found with id: " + idUser));
     }
 
     public List<User> getAllUsers() {

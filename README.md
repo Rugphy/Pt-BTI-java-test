@@ -47,7 +47,6 @@ This project is a Spring Boot-based REST API for managing a warehouse. The appli
     spring.datasource.password=your_password
     spring.jpa.hibernate.ddl-auto=update
     spring.jpa.show-sql=true
-
     ```
 
 3. **Build the project**:

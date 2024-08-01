@@ -20,9 +20,9 @@ public class BorrowController {
         return borrowService.borrowItem(userId, inventoryId, quantity);
     }
 
-    @PostMapping("/return/{recordId}")
-    public BorrowRecord returnItem(@PathVariable Long borrowId) {
-        return borrowService.returnItem(borrowId);
+    @PostMapping("/return/{idBorrow}")
+    public BorrowRecord returnItem(@PathVariable Long idBorrow) {
+        return borrowService.returnItem(idBorrow);
     }
 
     @GetMapping
